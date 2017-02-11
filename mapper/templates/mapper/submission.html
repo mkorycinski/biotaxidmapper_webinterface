@@ -1,0 +1,15 @@
+{% extends 'mapper/index.html' %}
+{% load static %}
+
+{% block content %}
+<article>
+    <p class="article-title">New Job</p>
+    <p>Provide a file in FASTA format containing sequences you want to mark with taxonomic information.</p>
+    <p style="color:red;">For now only protein sequences with NCBI accessions are supported.</p>
+    <form method="POST" class="post-form" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <center><button type="submit" class="save-btn btn-default">Submit</button></center>
+    </form>
+</article>
+{% endblock %}

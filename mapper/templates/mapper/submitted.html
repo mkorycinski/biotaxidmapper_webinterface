@@ -1,0 +1,10 @@
+{% extends 'mapper/index.html' %}
+{% load static %}
+
+{% block content %}
+<article>
+    <p class="article-title">Job submitted</p>
+    <p>Your job has been submitted with job_id: {{ jobid }}</p>
+    <p><a href="/results/{{ jobid }}" style="decoration: none">results/{{ jobid }}</a></p>
+</article>
+{% endblock %}

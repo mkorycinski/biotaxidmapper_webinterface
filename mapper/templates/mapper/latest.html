@@ -1,0 +1,14 @@
+{% extends 'mapper/index.html' %}
+{% load static %}
+
+{% block content %}
+{% for job in latest %}
+    <article>
+        <p class="article-title">#<a class="title" href="/results/{{ job.jobid }}">{{ job.jobid }}</a></p>
+        <p>Submitted at: {{ job.submit_date }}</p>
+        <p style="color:red">Will expire at: {{ job.expiration_date }}</p>
+        <p>Input file: <a class="article" href="{{ job.input_file.url }}">{{ job.input_name }}</a></p>
+        <p>Output file: <a class="article" href="/media/output/{{ job.jobid }}.out">{{ job.output_file }}</a></p>
+    </article>
+{% endfor %}
+{% endblock %}

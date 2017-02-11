@@ -1,0 +1,32 @@
+<!--{% load static %}-->
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{% static 'mapper/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title> Biological Taxonomy ID Mapper</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="navbar">
+        <div class="logo">
+            Biological Taxonomy ID Mapper
+        </div>
+        <div class="menu">
+            <p>
+                <a class="menu" href="/">Home</a>
+                <a class="menu" href="/submit/">Submit</a>
+                <a class="menu" href="/retrieve/">Retrieve Job</a>
+                <a class="menu" href="/results/">Recent Jobs</a>
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+
+</html>
