@@ -1,5 +1,7 @@
 db.sqlite3
 files/*
 migrations/*
+mapper/migrations/*
+mapper/BioTaxIDMapper
 *.pyc
 *__pycache__*
